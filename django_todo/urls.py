@@ -20,6 +20,7 @@ from hello_django.django_todo import urls as app_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include(app_urls)),
     path('', views.get_todo_list, name='get_todo_list'),
     path('add', views.add_item, name='add'),
     path('edit/<item_id>', views.edit_item, name='edit'),
